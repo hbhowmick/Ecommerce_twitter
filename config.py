@@ -13,8 +13,14 @@ class Config(object):
     # it should never be given out, and should be something that is difficult to break
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
 
-    # setup our database URI, which is the location of our database file/server
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(BASEDIR, 'app.db')
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    # uri for sql lite database
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    #   'sqlite:///' + os.path.join(basedir, 'app.db')
+
+    # uri for postgres local database
+    # SQLALCHEMY_DATABASE_URI = 'postgresql://<admin>:<password>@<ip_address>:<port_number>/<server_name>'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    'postgresql://postgres:Then1rb@nd@localhost:5432/ecommerce'
