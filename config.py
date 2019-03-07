@@ -16,6 +16,8 @@ class Config(object):
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    STRIPE_SECRET_KEY = 'sk_test_jGb3gehPvdBOM1B80BubxeKu'
+
     # uri for sql lite database
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
     #   'sqlite:///' + os.path.join(basedir, 'app.db')
